@@ -4,6 +4,7 @@
   "title": "Flexible Modules",
   "author": "Soul-Burn",
   "factorio_version": "1.1",
+  "description": "Allows erasing and reprogramming of modules into other modules through blank modules.",
   "dependencies": [
     "base >= 1.1.41",
     "? space-exploration",
