@@ -1,0 +1,15 @@
+{
+  "name": "flexible-modules",
+  "version": "0.1.0",
+  "title": "Flexible Modules",
+  "author": "Soul-Burn",
+  "factorio_version": "1.1",
+  "dependencies": [
+    "base >= 1.1.41",
+    "? space-exploration",
+    "? CircuitProcessing",
+    "? angelsbioprocessing",
+    "! pyalienlife",
+    "! IndustrialRevolution"
+  ]
+}
