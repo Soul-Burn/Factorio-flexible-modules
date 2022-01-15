@@ -3,7 +3,7 @@ data:extend({
     type = "bool-setting",
     name = "fm-disable-direct-recipes",
     setting_type = "startup",
-    default_value = true,
+    default_value = false,
   },
   {
     type = "bool-setting",
