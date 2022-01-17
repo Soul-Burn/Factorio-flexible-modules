@@ -2,6 +2,8 @@
 
 Allows erasing and reprogramming of modules into other modules through "blank modules".
 
+Inspired by the programmable modules in [Industrial Revolution 2](https://mods.factorio.com/mod/IndustrialRevolution) made by [Deadlock989](https://mods.factorio.com/user/Deadlock989).
+
 ![Demo](https://raw.githubusercontent.com/Soul-Burn/Factorio-flexible-modules/main/resources/demo.gif)
 
 Blank modules can be created in 2 ways:
@@ -22,14 +24,15 @@ Both options are unchecked by default. Checking both options will remove the abi
 
 This mod was tested with for compatibility the following mods:
 
-* Base
-* Space Exploration
-* Krastorio 2
-* SeaBlock
-  * Blank modules are shown as level 2, 4, 6, 8, following the internal modules names.
-* SeaBlock without CircuitProcessing
+* [Base](https://factorio.com/)
+* [Space Exploration](https://mods.factorio.com/mod/space-exploration)
+* [Krastorio 2](https://mods.factorio.com/mod/Krastorio2)
+* [SeaBlock](https://mods.factorio.com/mod/SeaBlockMetaPack) - Blank modules are shown as level 2, 4, 6, 8, following the internal modules names.
+* SeaBlock without [CircuitProcessing](https://mods.factorio.com/mod/CircuitProcessing)
 
 Incompatible with:
 
-* Industrial Revolution 2 - Has a similar programming mechanism.
-* PyAlienLife - Has many unique modules with special interactions.
+* [Industrial Revolution 2](https://mods.factorio.com/mod/IndustrialRevolution) - Already has a similar programming mechanism.
+* [PyAlienLife](https://mods.factorio.com/mod/pyalienlife) - Has many unique modules with special interactions.
+
+Please note that if a module's recipe is changed by a different mod's update, the "blank module" recipes may change as well.
