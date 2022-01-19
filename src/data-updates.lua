@@ -1,3 +1,5 @@
+local util = require("util")
+
 local sha256 = require("lib/sha256")
 
 local disable_direct_recipes = settings.startup["fm-disable-direct-recipes"].value
@@ -25,17 +27,20 @@ local function copy_icons(prototype)
 end
 
 local function extract_level(name)
-  return name:match("-(%d+)$") or 1
+  return name:match("-(%d+)$") or "1"
 end
 
 local names = {}
+
 function names.blank(name)
   local level = extract_level(name)
-  return "fm-blank-module" .. (level == 1 and "" or "-" .. level)
+  return "fm-blank-module" .. (level == "1" and "" or "-" .. level)
 end
+
 function names.program(name)
   return "fm-program-module-" .. name
 end
+
 function names.erase(name)
   return "fm-erase-module-" .. name
 end
@@ -56,9 +61,9 @@ for _, subgroup in pairs(module_subgroups) do
     }
   end
   data:extend({
-    make_subgroup("fm-blank", subgroup),
-    make_subgroup("fm-program", subgroup),
-    make_subgroup("fm-erase", subgroup),
+    make_subgroup("fm-blank"),
+    make_subgroup("fm-program"),
+    make_subgroup("fm-erase"),
   })
 end
 
@@ -227,8 +232,8 @@ for _, technology in pairs(data.raw.technology) do
 
     -- Remove direct recipes
     if disable_direct_recipes then
-      while #original_module_unlock_indexes > 0 do
-        table.remove(technology.effects, table.remove(original_module_unlock_indexes))
+      for i = #original_module_unlock_indexes, 1, -1 do
+        table.remove(technology.effects, original_module_unlock_indexes[i])
       end
     end
 
